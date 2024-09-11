@@ -32,8 +32,6 @@ python3 -m pip install ansible
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 ```
-- Launch an EC2 instance
-aws [documentation](https://docs.aws.amazon.com/cli/v1/userguide/cli-services-ec2-instances.html) as a guide
 - Create terraform and ansible directories
 ```
 mkdir ansible terraform
@@ -48,5 +46,7 @@ mkdir layer00 layer01 layer02
 - Layer00 - Networking
 ```
 cd layer00
-touch main.tf
+touch main.tf providers.tf outputs.tf variables.tf
 ```
+- Create terraform remote state
+- 
