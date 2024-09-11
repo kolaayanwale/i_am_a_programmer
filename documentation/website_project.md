@@ -4,6 +4,12 @@
 [AWS account](aws.amazon.com)
 - Install the aws cli
 follow aws [documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Create an IAM user so as to not use the Root account.
+- Note: AWS Identity center (SSO) is the recommended practice as credentials are temporary (Enable AWS Orgs and Identity Centre). User's secret key/access keys sufficient for this use case
+- retrieve and save credentials. Configure aws cli
+```
+aws configure
+```
 - Create or use an existing [repo](github.com)
 
 ### Deploy ec2 instance
@@ -18,6 +24,29 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 - [Install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible-with-pip) in the virtual env for configuration
+```
+python3 -m pip install ansible 
+```
+- [Install terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+```
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
 - Launch an EC2 instance
 aws [documentation](https://docs.aws.amazon.com/cli/v1/userguide/cli-services-ec2-instances.html) as a guide
-
+- Create terraform and ansible directories
+```
+mkdir ansible terraform
+```
+### Terraform
+- Create terraform layers
+```
+cd terraform
+touch README.md
+mkdir layer00 layer01 layer02
+```
+- Layer00 - Networking
+```
+cd layer00
+touch main.tf
+```
