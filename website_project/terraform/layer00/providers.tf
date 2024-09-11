@@ -5,6 +5,11 @@ terraform {
         # version = "value"
       }
     }
+    backend "s3" {
+      bucket = "value"
+      key = "value"
+      region = var.region
+    }
     # required_version = "value"
 }
 
