@@ -6,13 +6,13 @@ terraform {
       }
     }
     backend "s3" {
-      bucket = "value"
-      key = "value"
+      bucket = "kola-playground"
+      key = "tfremotestate/layer00"
       region = var.region
     }
     # required_version = "value"
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
