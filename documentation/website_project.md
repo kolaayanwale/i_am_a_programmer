@@ -53,3 +53,15 @@ touch main.tf providers.tf outputs.tf variables.tf terraform.tfvars
 ```
 aws s3 mb s3://kola-playground/
 ```
+* Create a dynamodb table for state locking (if neccessary)
+```
+aws dynamodb create-table \
+    --table-name TfStateLock \
+    --attribute-definitions \
+        AttributeName=LockID,AttributeType=S \
+    --key-schema \
+        AttributeName=LockID,KeyType=HASH \
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --table-class STANDARD
+```
