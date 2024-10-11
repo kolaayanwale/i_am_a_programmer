@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     aws = {
-      source  = "harshicorp/aws"
-      version = "5.67"
+      source  = "hashicorp/aws"
+      version = "5.67.0"
     }
   }
   backend "s3" {
@@ -11,9 +11,9 @@ terraform {
     #   dynamodb_table = "TfStateLock"
     region = "us-east-1"
   }
-  # required_version = "value"
+  required_version = "1.9.5"
 }
 
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }

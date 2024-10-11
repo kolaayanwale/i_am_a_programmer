@@ -10,3 +10,6 @@
 │     terraform providers
 ╵
 ```
+```
+Solution: it is HASHICORP, not harshicorp.
+```
