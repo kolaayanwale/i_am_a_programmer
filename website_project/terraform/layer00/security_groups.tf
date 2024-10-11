@@ -1,6 +1,6 @@
 # Public Security Group
 resource "aws_security_group" "public_sg" {
-  vpc_id = aws_vpc.my_vpc.id
+  vpc_id = aws_vpc.custom_vpc.id
 
   ingress {
     from_port   = 22 #ssh
@@ -26,7 +26,7 @@ resource "aws_security_group" "public_sg" {
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # All traffic
+    protocol    = "-1" # All traffic
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -37,19 +37,19 @@ resource "aws_security_group" "public_sg" {
 
 # Private Security Group
 resource "aws_security_group" "private_sg" {
-  vpc_id = aws_vpc.my_vpc.id
+  vpc_id = aws_vpc.custom_vpc.id
 
   ingress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # All internal traffic
+    protocol    = "-1" # All internal traffic
     cidr_blocks = ["10.0.0.0/16"]
   }
 
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # All outbound traffic
+    protocol    = "-1" # All outbound traffic
     cidr_blocks = ["0.0.0.0/0"]
   }
 
