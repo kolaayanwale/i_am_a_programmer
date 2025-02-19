@@ -1,3 +1,17 @@
+
+| Command | Full Name/Description           | Tips                                    |
+| ------- | ------------------------------- | --------------------------------------- |
+| ls      | listing                         | ls directory                            |
+| cd      | change directory                |                                         |
+| cat     | concatenate                     |                                         |
+| pwd     | print working directory         |                                         |
+| mv      | move                            | can be used to rename files/directories |
+| echo    | Output any text that we provide |                                         |
+| whoami  | User currently logged in as     |                                         |
+
+hostname?
+from vnosc, rdp into other environments. a different vpn is not needed
+
 - list of block devices attached to your linux workstation
 lsblk
 
