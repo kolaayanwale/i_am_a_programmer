@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#"PlatformDetails": "Linux/UNIX"
 # Ensure software packages are up to date
 echo "Updating software packages..."
 sudo yum update -y

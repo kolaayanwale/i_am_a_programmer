@@ -3,3 +3,4 @@ Python/.venv
 .terraform
 .terraform.lock.hcl
 node_modules
+__pycache__
