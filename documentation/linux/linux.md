@@ -37,6 +37,7 @@ systemctl
 
 - check logs for jenkins
 sudo journalctl -u jenkins --no-pager
+
 ### Error: Built in node had no space on the /tmp directory to run a Jenkins job
 ### Solution: Resize the /tmp directory to be greater than 1GB
 * Since /tmp is tmpfs, it’s using RAM, not disk.
