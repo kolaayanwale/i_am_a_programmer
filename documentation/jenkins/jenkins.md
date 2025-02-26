@@ -13,3 +13,9 @@ cat advice.json | jq -r .slip.advice > advice.message
 sudo dnf install cowsay -y
 cat advice.message | cowsay -f $(ls /usr/share/cowsay/ | shuf -n 1)
 ```
+
+### jenkins-cli
+```
+curl -Lv http://3.229.126.222:8080/login 2>&1 | grep -i 'x-ssh-endpoin
+t'
+```
